@@ -3,7 +3,7 @@ const dotenv = require("dotenv");
 const router = require("./Routes/Task");
 const databaseConnection = require("./Utils/database");
 const ScheduleTask = require("./Utils/scheduler");
-
+const cors = require("cors");
 
 const app = express();
 
