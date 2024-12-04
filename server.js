@@ -9,6 +9,13 @@ const app = express();
 
 dotenv.config();
 
+// Enable CORS for all routes
+app.use(cors({
+   origin: process.env.FRONTEND_URL, // Allow all origins, or specify a list of allowed origins  http://127.0.0.1:5500
+   methods: ['GET', 'POST'], // Allowed methods
+   credentials: true, // Allowed headers
+}));
+
 // Middleware
 app.use(express.json());
 
